@@ -232,6 +232,7 @@ header {
     .ingresos_descripcion,
     .egresos_descripcion {
         min-height: 100px;
+        min-width: 300px;
     }
 
     .listado {
