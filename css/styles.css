@@ -154,6 +154,7 @@ header {
     width: 80vw;
     font-size: 20px;
     margin: 10px auto;
+    gap: 10px;
 }
 
 .agregar_contenedor select {
@@ -193,13 +194,13 @@ header {
 
     .presupuesto {
         padding: 15px;
-        /* text-align: center; */
     }
+
     .presupuesto_titulo {
         font-size: 30px;
         font-weight: bold;
     }
-    
+
     .presupuesto_valor {
         font-size: 40px;
     }
@@ -207,23 +208,41 @@ header {
     .presupuesto_ingresos,
     .presupuesto_egresos {
         font-size: 25px;
+        width: 300px;
+        flex-wrap: wrap;
+        gap: 3px;
     }
 
+    .agregar_contenedor input {
+        margin: 5px 0px;
+    }
 
+    .agregar_contenedor button {
+        margin: 5px 0px;
+    }
 
     .ingresosYEgresos {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80vw;
         flex-direction: column;
-        gap: 15px;
-
+        gap: 5px;
     }
 
     .ingresos_descripcion,
     .egresos_descripcion {
         min-height: 100px;
+    }
+
+    .listado {
+        min-width: 300px;
+        background-color: red;
+        gap: 30px;
+    }
+
+    .listado-egresos {
+        min-width: 300px;
+        gap: 30px;
     }
 
 
