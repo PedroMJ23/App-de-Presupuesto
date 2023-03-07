@@ -9,33 +9,92 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body onload="cargarApp()">
     <header>
         <div class="presupuesto">
             <div class="presupuesto_titulo">Presupuesto disponible:</div>
         </div>
-        <div class="presupuesto_valor" id="presupueto"> $2000</div>
+        <div class="presupuesto_valor" id="presupuesto"> $0</div>
         <div class="presupuesto_ingresos">
-            <div class="presupuesto_ingresos-texto" id="ingresos">Ingresos:</div>
+            <div class="presupuesto_ingresos-texto">Ingresos:</div>
             <div class="derecha">
-                <div class="presupuesto_ingreso-valor" id="egresos">$8000</div>
-                <div class="presupuesto_ingreso-porcentaje" id="porcentaje">+%25</div>
+                <div class="presupuesto_ingreso-valor" id="ingresos">$0</div>
+                <div class="presupuesto_ingreso-porcentaje"></div>
             </div>
 
         </div>
         <div class="presupuesto_egresos">
             <div class="presupuesto_egresos-texto">Egresos:</div>
             <div class="derecha">
-                <div class="presupuesto_egreso-valor">$6000</div>
-                <div class="presupuesto_egreso-porcentaje">-%75</div>
+                <div class="presupuesto_egreso-valor" id="egresos">$0</div>
+                <div class="presupuesto_egreso-porcentaje" id="porcentaje">-%0</div>
             </div>
         </div>
     </header>
+    <main>
+        <div class="agregar_ingresos_egresos">
+            <form id="form" onsubmit="return false;">
+                <div class="agregar_contenedor">
+                    <select id="tipo" class="agregar_tipo">
+                        <option value="ingreso" selected>+</option>
+                        <option value="egreso">-</option>
+                    </select>
+                    <input type="text" class="agregar_descripcion" placeholder="Agregar descripción"
+                        id="descripcion_input">
+                    <input type="number" class="agregar_valor" placeholder="Valor" id="valor_input" step="any">
+                    <button class="agregar_btn" onclick="agregarDato()">Agregar</button>
+                </div>
+            </form>
+        </div>
+        <div class="ingresosYEgresos">
+
+            <div class="ingresos_descripcion">
+                <h2>Ingresos:</h2>
+                <div class="esperando_ingreso">
+                    <p>Esperando ingreso</p>
+                </div>
+                <div class="ingresos_text_valor" id="lista_ingresos">
+                    <div class="esperando_ingreso">
+                        <p>Esperando ingreso</p>
+                    </div>
+                    <!--<div class="listado">
+                         <div class="ingresos_text">Salario</div>
+                    <div class="ingresos_valor">6000
+                        <div class="elemento_eliminar">
+                            <button class="elemento_eliminar-btn" id="eliminar_ingreso-btn">
+                                <ion-icon name="close-circle-outline" class="icon_close"></ion-icon>
+                            </button>
+                        </div>
+                    </div> 
+                    </div>-->
+                </div>
+            </div>
+            <div class="egresos_descripcion">
+                <h2>Egresos:</h2>
+                <div class="esperando_egreso">
+                    <p>Esperando egreso</p>
+                </div>
+                <div class="egresos_text_valor" id="lista_egresos">
+                    <!-- <div class="egresos_text">Alimentos</div>
+                    <div class="egresos_valor">2000
+                        <div class="elemento_porcentaje">%10</div>
+                        <div class="elemento_eliminar">
+                            <button class="elemento_eliminar-btn">
+                                <ion-icon name="close-circle-outline" class="icon_close"></ion-icon>
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="/js/Datos.js"></script>
     <script src="/js/ingresos.js"></script>
     <script src="/js/egresos.js"></script>
     <script src="/js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

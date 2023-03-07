@@ -1,31 +1,42 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-header{
+
+body {
+    background-color: beige;
+
+}
+
+header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25px 10px;
+    margin: 25px auto;
     flex-direction: column;
     font-size: 40px;
 }
-.presupuesto{
+
+.presupuesto {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin: 0px auto;
+
 }
-.presupuesto_titulo{
+
+.presupuesto_titulo {
     font-size: 40px;
     font-weight: bold;
 }
-.presupuesto_valor{
+
+.presupuesto_valor {
     font-size: 50px;
 }
 
-.presupuesto_ingresos, .presupuesto_egresos{
+.presupuesto_ingresos,
+.presupuesto_egresos {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,9 +47,185 @@ header{
     border-radius: 5px;
     padding: 10px;
 }
-.derecha{
+
+.derecha {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px ;
+    gap: 10px;
+}
+
+.ingresosYEgresos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 150px;
+
+
+}
+
+.ingresos_valor,
+.egresos_valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+}
+
+.elemento_eliminar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.elemento_eliminar-btn {
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: black;
+
+}
+
+.icon_close {
+    height: 25px;
+    width: 25px;
+}
+
+.listado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    min-width: 350px;
+    padding: 5px;
+    border: solid 1px green;
+    border-radius: 5px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 253, 72, 1) 100%);
+}
+
+.listado-egresos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    min-width: 350px;
+    padding: 5px;
+    border: solid 1px red;
+    border-radius: 5px;
+    background: rgb(251, 173, 63);
+    background: radial-gradient(circle, rgba(251, 173, 63, 1) 0%, rgba(237, 66, 51, 1) 100%);
+}
+
+.ingresos_descripcion,
+.egresos_descripcion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 450px;
+    padding: 15px;
+}
+
+.ingresos_text_valor,
+.egresos_text_valor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 250px;
+    margin: 10px;
+    padding: 15px;
+    gap: 10px;
+
+}
+
+.porcentajeEnEgresos {
+    border-bottom: 1px solid black;
+}
+
+.agregar_ingresos_egresos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.agregar_contenedor select {
+    font-size: 20px;
+    width: 45px;
+    height: 30px;
+    margin: 5px;
+}
+
+.agregar_contenedor input {
+    font-size: 20px;
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.agregar_btn {
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+
+}
+
+.checkmark_btn {
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    .presupuesto {
+        padding: 15px;
+        /* text-align: center; */
+    }
+    .presupuesto_titulo {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .presupuesto_valor {
+        font-size: 40px;
+    }
+
+    .presupuesto_ingresos,
+    .presupuesto_egresos {
+        font-size: 25px;
+    }
+
+
+
+    .ingresosYEgresos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+    .ingresos_descripcion,
+    .egresos_descripcion {
+        min-height: 100px;
+    }
+
+
+
 }
