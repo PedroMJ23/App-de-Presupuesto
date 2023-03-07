@@ -235,13 +235,13 @@ header {
     }
 
     .listado {
-        min-width: 300px;
+        width: 200px;
         background-color: red;
         gap: 30px;
     }
 
     .listado-egresos {
-        min-width: 300px;
+        width: 200px;
         gap: 30px;
     }
 
