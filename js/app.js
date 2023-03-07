@@ -14,6 +14,7 @@ let cargarApp = () => {
     cargarHeader()
     cargarIngresos();
     cargarEgresos();
+    limpiarForm()
 }
 
 let totalIngresos = () => {
@@ -131,23 +132,31 @@ let agregarDato = () => {
     let tipo = formulario['tipo'];
     let descripcion = formulario['descripcion_input'];
     let valor = formulario['valor_input'];
+   
     if (descripcion.value !== '' && valor.value !== '') {
         if (tipo.value === 'ingreso') {
             ingresos.push(new Ingreso(descripcion.value, Number(valor.value)))
             cargarHeader();
             cargarIngresos();
+            //limpiarForm()
         } else if (tipo.value === 'egreso') {
             egresos.push(new Egreso(descripcion.value, Number(valor.value)))
             cargarHeader();
             cargarEgresos();
+            //limpiarForm()
 
         }
     }
-
+   
+   
 
 }
+const formulario = document.querySelector('#form');
+const btnForm = document.querySelector('.agregar_btn')
 
-
-
-
-
+const limpiarForm = ()=>{
+    btnForm.addEventListener('click', (e)=>{
+        e.preventDefault();
+        formulario.reset();
+    })
+}
